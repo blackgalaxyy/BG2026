@@ -322,48 +322,11 @@ export default function Home() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 1.2 }}
-            className="text-base md:text-lg text-muted-foreground max-w-2xl mb-10 font-light leading-relaxed"
+            className="text-base md:text-lg text-muted-foreground max-w-3xl font-light leading-relaxed"
           >
             Black Galaxy builds AI-driven systems that evaluate, decide and optimize —
-            transforming how organizations operate, hire and scale.
           </motion.p>
-
-          {/* CTA buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.45 }}
-            className="flex flex-row flex-wrap items-center justify-center gap-4 pointer-events-auto"
-          >
-            <motion.a
-              href="#products"
-              whileHover={{ scale: 1.06 }}
-              whileTap={{ scale: 0.97 }}
-              className="px-7 py-3.5 rounded-md btn-lava text-base font-bold tracking-wide flex items-center gap-2"
-            >
-              Explore Products <ArrowRight size={18} />
-            </motion.a>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
-              className="px-7 py-3.5 rounded-md btn-mercury text-base font-bold tracking-wide"
-            >
-              Request Demo
-            </motion.a>
-          </motion.div>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.2 }}
-          className="absolute bottom-8 right-14 flex flex-col items-center gap-2 pointer-events-none z-10"
-        >
-          <span className="text-[10px] tracking-widest text-muted-foreground/60 uppercase">Scroll</span>
-          <motion.div animate={{ y: [0, 7, 0] }} transition={{ repeat: Infinity, duration: 1.6 }} className="w-px h-7 bg-gradient-to-b from-primary/60 to-transparent" />
-        </motion.div>
       </section>
 
       {/* ── STATS STRIP ── */}
