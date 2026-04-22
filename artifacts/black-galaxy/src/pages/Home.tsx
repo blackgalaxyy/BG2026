@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, useScroll, useSpring, useInView, useMotionValue, useTransform, AnimatePresence } from 'framer-motion';
 import { CursorTrail } from '@/components/CursorTrail';
 import logoImage from '@assets/ChatGPT_Image_Apr_22,_2026,_09_03_13_PM_1776872020834.png';
-import brainImage from '@assets/Screenshot_2026-04-21_121610_1776873020347.png';
+import brainImage from '@assets/Screenshot_2026-04-18_124811_1776873839017.png';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight } from 'lucide-react';
@@ -249,22 +249,20 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20" style={{ background: '#000000' }}>
-        {/* Brain — reference image, centered */}
+        {/* Brain — HDR realistic, centered */}
         <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
           <img
             src={brainImage}
             alt=""
-            className="w-[95%] max-w-[1100px] h-auto object-contain"
-            style={{ mixBlendMode: 'screen', opacity: 0.95 }}
+            className="w-[95%] max-w-[1200px] h-auto object-contain"
+            style={{
+              filter: 'brightness(1.15) contrast(1.1) saturate(1.15)',
+            }}
           />
         </div>
 
         {/* Cursor particle scatter */}
         <CursorTrail />
-
-        {/* Radial dark centre so text pops over the bright brain */}
-        <div className="absolute inset-0 z-0 pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,0,0,0.38) 0%, transparent 75%)' }} />
 
         {/* All hero content — vertically + horizontally centred */}
         <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto w-full pointer-events-none">
