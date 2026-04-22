@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, useScroll, useSpring, useInView, useMotionValue, useTransform, AnimatePresence } from 'framer-motion';
 import { Brain3D } from '@/components/Brain3D';
+import { CursorTrail } from '@/components/CursorTrail';
 import logoImage from '@assets/ChatGPT_Image_Apr_22,_2026,_09_03_13_PM_1776872020834.png';
 import brainImage from '@assets/Screenshot_2026-04-18_124519_1776872223848.png';
 import { Input } from '@/components/ui/input';
@@ -251,6 +252,9 @@ export default function Home() {
       <section id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20" style={{ background: '#000000' }}>
         {/* Brain — full canvas, centered */}
         <Brain3D />
+
+        {/* Cursor particle trail */}
+        <CursorTrail />
 
         {/* Radial dark centre so text pops over the bright brain */}
         <div className="absolute inset-0 z-0 pointer-events-none"
