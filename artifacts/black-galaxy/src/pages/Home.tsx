@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, useScroll, useSpring, useInView, useMotionValue, useTransform, AnimatePresence } from 'framer-motion';
 import { Brain3D } from '@/components/Brain3D';
-import logoImage from '@assets/image_1776871156990.png';
+import logoImage from '@assets/ChatGPT_Image_Apr_22,_2026,_08_57_50_PM_1776871812549.png';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight } from 'lucide-react';
