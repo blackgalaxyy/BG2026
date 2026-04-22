@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, useScroll, useSpring, useInView, useMotionValue, useTransform, AnimatePresence } from 'framer-motion';
 import { Brain3D } from '@/components/Brain3D';
+import logoImage from '@assets/image_1776871156990.png';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight } from 'lucide-react';
@@ -122,15 +123,14 @@ const Navbar = () => {
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-background/90 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.5)]' : 'bg-transparent'}`}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2 cursor-pointer group">
-          <motion.div
-            whileHover={{ scale: 1.1, rotate: 5 }}
+        <a href="#home" className="flex items-center cursor-pointer group">
+          <motion.img
+            src={logoImage}
+            alt="Black Galaxy"
+            whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
-            className="w-9 h-9 rounded-sm bg-gradient-to-br from-primary to-orange-500 flex items-center justify-center shadow-[0_0_18px_rgba(255,69,0,0.5)] group-hover:shadow-[0_0_30px_rgba(255,69,0,0.8)] transition-all"
-          >
-            <Cpu size={18} className="text-white" />
-          </motion.div>
-          <span className="font-black text-xl tracking-widest text-white">BLACK GALAXY</span>
+            className="h-12 w-auto object-contain"
+          />
         </a>
         <div className="hidden md:flex items-center gap-8">
           {sections.map((item) => (
@@ -204,11 +204,8 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
         <div className="col-span-1 md:col-span-2">
-          <div className="flex items-center gap-2 mb-6">
-            <div className="w-9 h-9 rounded-sm bg-gradient-to-br from-primary to-orange-500 flex items-center justify-center shadow-[0_0_18px_rgba(255,69,0,0.4)]">
-              <Cpu size={18} className="text-white" />
-            </div>
-            <span className="font-black text-xl tracking-widest text-white">BLACK GALAXY</span>
+          <div className="flex items-center mb-6">
+            <img src={logoImage} alt="Black Galaxy" className="h-14 w-auto object-contain" />
           </div>
           <p className="text-muted-foreground max-w-sm leading-relaxed">Engineering intelligence systems for the real world. We build AI that evaluates, decides, and optimizes at scale.</p>
         </div>
