@@ -284,7 +284,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-6xl lg:text-[5.2rem] font-black tracking-tight leading-[1.1] mb-6">
             {/* Line 1: Engineering (white) + Intelligence (orange) */}
             <div>
-              {[['Engineering', false], ['Intelligence', true]].map(([word, orange], i) => (
+              {[['Engineering', false], ['Intelligence', false]].map(([word, orange], i) => (
                 <motion.span
                   key={String(word)}
                   initial={{ opacity: 0, y: 32 }}
@@ -301,7 +301,7 @@ export default function Home() {
             </div>
             {/* Line 2: Systems (orange) + for the Real World (white) */}
             <div>
-              {[['Systems', true], ['for', false], ['the', false], ['Real', false], ['World', false]].map(([word, orange], i) => (
+              {[['Systems', false], ['for', false], ['the', false], ['Real', false], ['World', false]].map(([word, orange], i) => (
                 <motion.span
                   key={String(word)}
                   initial={{ opacity: 0, y: 32 }}
