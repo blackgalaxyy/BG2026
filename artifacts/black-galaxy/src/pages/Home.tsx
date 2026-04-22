@@ -621,10 +621,10 @@ export default function Home() {
                 <p className="text-xl text-muted-foreground mb-12">Stop relying on outdated manual processes. Deploy autonomous intelligence systems that scale infinitely and decide precisely.</p>
                 <div className="space-y-6">
                   {[
-                    { icon: Globe, label: "Location", value: "Mangalore, India" },
-                    { icon: Zap, label: "Email", value: "contact@blackgalaxy.com" },
+                    { icon: Globe, label: "Location", value: "Mysore, India" },
+                    { icon: Zap, label: "Email", value: "admin@blackgalaxy.co.in", href: "mailto:admin@blackgalaxy.co.in" },
                     { icon: Target, label: "Phone", value: "+91 7204650153" },
-                  ].map(({ icon: Icon, label, value }, i) => (
+                  ].map(({ icon: Icon, label, value, href }: any, i) => (
                     <motion.div
                       key={i}
                       initial={{ opacity: 0, x: -20 }}
@@ -638,7 +638,11 @@ export default function Home() {
                       </motion.div>
                       <div>
                         <h4 className="font-bold text-white">{label}</h4>
-                        <p className="text-muted-foreground">{value}</p>
+                        {href ? (
+                          <a href={href} className="text-muted-foreground hover:text-primary transition-colors">{value}</a>
+                        ) : (
+                          <p className="text-muted-foreground">{value}</p>
+                        )}
                       </div>
                     </motion.div>
                   ))}
