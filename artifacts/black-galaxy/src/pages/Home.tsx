@@ -250,14 +250,7 @@ export default function Home() {
       {/* ── HERO ── */}
       <section id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20" style={{ background: '#000000' }}>
         {/* Brain — full canvas, centered */}
-        <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-          <img
-            src={brainImage}
-            alt=""
-            className="w-[90%] max-w-[900px] h-auto object-contain opacity-80"
-            style={{ mixBlendMode: 'screen' }}
-          />
-        </div>
+        <Brain3D />
 
         {/* Radial dark centre so text pops over the bright brain */}
         <div className="absolute inset-0 z-0 pointer-events-none"
