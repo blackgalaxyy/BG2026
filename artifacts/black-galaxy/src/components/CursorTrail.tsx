@@ -48,32 +48,33 @@ export function CursorTrail() {
       mouseRef.current.y = y;
       mouseRef.current.active = true;
 
-      // Spawn particles based on movement speed
+      // Spawn scattered particles based on movement speed
       const dx = mouseRef.current.x - mouseRef.current.prevX;
       const dy = mouseRef.current.y - mouseRef.current.prevY;
       const speed = Math.sqrt(dx * dx + dy * dy);
-      const count = Math.min(6, Math.max(1, Math.floor(speed / 4)));
+      const count = Math.min(20, Math.max(2, Math.floor(speed / 1.8)));
 
       for (let i = 0; i < count; i++) {
         const t = i / count;
         const px = mouseRef.current.prevX + dx * t;
         const py = mouseRef.current.prevY + dy * t;
+        // Scatter outward — perpendicular to motion + random burst
         const angle = Math.random() * Math.PI * 2;
-        const sp = 0.3 + Math.random() * 1.2;
+        const sp = 1.5 + Math.random() * 4.5;
         particlesRef.current.push({
-          x: px + (Math.random() - 0.5) * 4,
-          y: py + (Math.random() - 0.5) * 4,
-          vx: Math.cos(angle) * sp + dx * 0.04,
-          vy: Math.sin(angle) * sp + dy * 0.04 - 0.3,
+          x: px + (Math.random() - 0.5) * 6,
+          y: py + (Math.random() - 0.5) * 6,
+          vx: Math.cos(angle) * sp + dx * 0.08,
+          vy: Math.sin(angle) * sp + dy * 0.08 - 0.4,
           life: 0,
-          maxLife: 60 + Math.random() * 40,
-          size: 1.2 + Math.random() * 2.4,
-          hue: 18 + Math.random() * 22,
+          maxLife: 50 + Math.random() * 60,
+          size: 1.0 + Math.random() * 2.6,
+          hue: 14 + Math.random() * 28,
         });
       }
       // Cap particles
-      if (particlesRef.current.length > 600) {
-        particlesRef.current.splice(0, particlesRef.current.length - 600);
+      if (particlesRef.current.length > 1200) {
+        particlesRef.current.splice(0, particlesRef.current.length - 1200);
       }
     };
 
