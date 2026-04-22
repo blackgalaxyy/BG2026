@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, useScroll, useSpring, useInView, useMotionValue, useTransform, AnimatePresence } from 'framer-motion';
 import { CursorTrail } from '@/components/CursorTrail';
 import logoImage from '@assets/ChatGPT_Image_Apr_22,_2026,_09_03_13_PM_1776872020834.png';
-import brainImage from '@assets/Screenshot_2026-04-18_124811_1776873839017.png';
+import brainImage from '@assets/Screenshot_2026-04-18_124633_1776873952151.png';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight } from 'lucide-react';
