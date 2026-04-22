@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, useScroll, useSpring, useInView, useMotionValue, useTransform, AnimatePresence } from 'framer-motion';
 import { CursorTrail } from '@/components/CursorTrail';
 import logoImage from '@assets/ChatGPT_Image_Apr_22,_2026,_09_03_13_PM_1776872020834.png';
-import brainImage from '@assets/Screenshot_2026-04-18_124633_1776873952151.png';
+import brainImage from '@assets/ChatGPT_Image_Apr_22,_2026,_09_12_11_PM_1776872553537.png';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight } from 'lucide-react';
@@ -254,9 +254,10 @@ export default function Home() {
           <img
             src={brainImage}
             alt=""
-            className="w-[95%] max-w-[1200px] h-auto object-contain"
+            className="max-w-[70%] max-h-[80%] w-auto h-auto object-contain"
             style={{
-              filter: 'brightness(1.15) contrast(1.1) saturate(1.15)',
+              filter: 'brightness(1.05) contrast(1.05) saturate(1.1)',
+              opacity: 0.85,
             }}
           />
         </div>
