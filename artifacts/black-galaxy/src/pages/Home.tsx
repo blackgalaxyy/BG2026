@@ -3,6 +3,7 @@ import { motion, useScroll, useSpring, useInView, useMotionValue, useTransform, 
 import { CursorTrail } from '@/components/CursorTrail';
 import logoImage from '@assets/ChatGPT_Image_Apr_23,_2026,_02_18_50_PM_1776934151722.png';
 import brainImage from '@assets/ChatGPT_Image_Apr_22,_2026,_09_12_11_PM_1776872553537.png';
+import vyonaLogo from '@assets/WhatsApp_Image_2026-04-22_at_10.21.38_PM_1776934253236.jpeg';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight } from 'lucide-react';
@@ -498,15 +499,8 @@ export default function Home() {
               <FadeIn delay={0.3} direction="right">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary to-orange-500 rounded-2xl blur-2xl opacity-25 transform rotate-3 scale-105 animate-pulse" />
-                  <TiltCard className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[4/3]">
-                    <img src="/images/neural-bg.png" alt="Vyona Intelligence Interface" className="w-full h-full object-cover opacity-90" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center">
-                      <div className="text-center px-8">
-                        <div className="text-6xl font-black text-gradient-lava mb-2">VYONA</div>
-                        <div className="text-sm tracking-widest text-white/60 uppercase">Intelligence Engine v1.0</div>
-                      </div>
-                    </div>
+                  <TiltCard className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[4/3] bg-black">
+                    <img src={vyonaLogo} alt="Vyona AI" className="w-full h-full object-contain" />
                   </TiltCard>
                 </div>
               </FadeIn>
