@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, useScroll, useSpring, useInView, useMotionValue, useTransform, AnimatePresence } from 'framer-motion';
 import { CursorTrail } from '@/components/CursorTrail';
-import logoImage from '@assets/image_1776933983022.png';
+import logoImage from '@assets/ChatGPT_Image_Apr_23,_2026,_02_18_50_PM_1776934151722.png';
 import brainImage from '@assets/ChatGPT_Image_Apr_22,_2026,_09_12_11_PM_1776872553537.png';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
