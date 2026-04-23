@@ -5,6 +5,7 @@ import logoImage from '@assets/ChatGPT_Image_Apr_23,_2026,_02_18_50_PM_177693415
 import brainImage from '@assets/ChatGPT_Image_Apr_22,_2026,_09_12_11_PM_1776872553537.png';
 import vyonaLogo from '@assets/WhatsApp_Image_2026-04-22_at_10.21.38_PM_1776934253236.jpeg';
 import aiHandImage from '@assets/image_1776935166898.png';
+import roadmapImage from '@assets/ChatGPT_Image_Apr_23,_2026,_02_39_59_PM_1776935435195.png';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight } from 'lucide-react';
@@ -518,7 +519,7 @@ export default function Home() {
 
           <FadeIn className="mb-12">
             <div className="relative rounded-2xl overflow-hidden border border-white/8 h-56 group">
-              <img src="/images/future-models.png" alt="Future AI Models" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src={roadmapImage} alt="Future AI Models" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent" />
               <div className="absolute inset-0 flex items-center px-10">
                 <div>
