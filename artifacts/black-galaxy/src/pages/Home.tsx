@@ -499,8 +499,8 @@ export default function Home() {
               <FadeIn delay={0.3} direction="right">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary to-orange-500 rounded-2xl blur-2xl opacity-25 transform rotate-3 scale-105 animate-pulse" />
-                  <TiltCard className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[4/3] bg-black">
-                    <img src={vyonaLogo} alt="Vyona AI" className="w-full h-full object-contain" />
+                  <TiltCard className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-square" style={{ backgroundColor: '#000000' }}>
+                    <img src={vyonaLogo} alt="Vyona AI" className="absolute inset-0 w-full h-full object-cover" />
                   </TiltCard>
                 </div>
               </FadeIn>
