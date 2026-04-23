@@ -4,6 +4,7 @@ import { CursorTrail } from '@/components/CursorTrail';
 import logoImage from '@assets/ChatGPT_Image_Apr_23,_2026,_02_18_50_PM_1776934151722.png';
 import brainImage from '@assets/ChatGPT_Image_Apr_22,_2026,_09_12_11_PM_1776872553537.png';
 import vyonaLogo from '@assets/WhatsApp_Image_2026-04-22_at_10.21.38_PM_1776934253236.jpeg';
+import aiHandImage from '@assets/image_1776935166898.png';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight } from 'lucide-react';
@@ -379,9 +380,9 @@ export default function Home() {
               <FadeIn delay={0.3} direction="right">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/25 to-orange-600/10 rounded-2xl blur-3xl opacity-60 transform -rotate-2 scale-105 animate-pulse" />
-                  <TiltCard className="relative rounded-2xl overflow-hidden border border-white/8 shadow-2xl aspect-[4/3]">
-                    <img src="/images/neural-bg.png" alt="AI Intelligence" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+                  <TiltCard className="relative rounded-2xl overflow-hidden border border-white/8 shadow-2xl aspect-[4/3]" style={{ backgroundColor: '#000000' }}>
+                    <img src={aiHandImage} alt="AI Intelligence" className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <p className="text-white/80 text-sm font-bold tracking-widest uppercase">Neural Intelligence Architecture</p>
                     </div>
