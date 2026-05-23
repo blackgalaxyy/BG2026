@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring, useInView, useMotionValue, useTransform, 
 import { CursorTrail } from '@/components/CursorTrail';
 import logoImage from '@assets/ChatGPT_Image_Apr_23,_2026,_02_18_50_PM_1776934151722.png';
 import brainImage from '@assets/ChatGPT_Image_Apr_22,_2026,_09_12_11_PM_1776872553537.png';
-import vyonaLogo from '@assets/WhatsApp_Image_2026-04-22_at_10.21.38_PM_1776934253236.jpeg';
+import vyonaLogo from '@assets/ChatGPT_Image_May_23,_2026,_09_52_41_PM_1779553380781.png';
 import aiHandImage from '@assets/image_1776935166898.png';
 import roadmapImage from '@assets/ChatGPT_Image_Apr_23,_2026,_02_39_59_PM_1776935435195.png';
 import { Input } from '@/components/ui/input';
