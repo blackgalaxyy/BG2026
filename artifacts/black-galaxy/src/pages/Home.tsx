@@ -419,7 +419,7 @@ export default function Home() {
           <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5">
             {[
               { icon: Layers, title: "Autonomous Evaluation", desc: "Systems that ingest unstructured data and output structured decisions." },
-              { icon: BarChart, title: "Predictive Engines", desc: "Models trained to forecast outcomes based on historical patterns." },
+              { icon: BarChart, title: "Predictive Engines", desc: "Models trained to forecast outcomes based on real-time problems." },
               { icon: Shield, title: "Unbiased Analysis", desc: "Removing human prejudice from critical operational evaluations." },
               { icon: Zap, title: "Real-time Processing", desc: "Instantaneous parsing of thousands of data points." },
               { icon: Cpu, title: "Scalable Intelligence", desc: "Architecture designed to grow linearly with organizational needs." }
