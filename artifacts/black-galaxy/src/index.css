@@ -168,15 +168,15 @@
 
 /* ─── Light hover cards ─── */
 .light-hover-card:hover {
-  background: rgba(240, 235, 230, 0.96) !important;
-  border-color: rgba(255, 90, 0, 0.3) !important;
-  box-shadow: 0 8px 40px rgba(255, 100, 0, 0.25) !important;
+  background: rgba(255, 120, 30, 0.18) !important;
+  border-color: rgba(255, 90, 0, 0.55) !important;
+  box-shadow: 0 8px 40px rgba(255, 80, 0, 0.35), 0 0 30px rgba(255, 100, 0, 0.15) inset !important;
   transform: translateY(-4px) scale(1.01);
 }
 .light-hover-card:hover::before { opacity: 0 !important; }
-.light-hover-card:hover .hover-title { color: #1a1a1a !important; }
-.light-hover-card:hover .hover-desc  { color: #444444 !important; }
-.light-hover-card:hover .hover-icon  { color: #cc3300 !important; }
+.light-hover-card:hover .hover-title { color: #ffffff !important; }
+.light-hover-card:hover .hover-desc  { color: rgba(255,220,190,0.9) !important; }
+.light-hover-card:hover .hover-icon  { color: #ffaa44 !important; }
 
 /* ─── Buttons ─── */
 .btn-lava {
