@@ -388,23 +388,23 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <StaggerItem>
-              <TiltCard className="p-10 rounded-2xl h-full lava-border">
+              <TiltCard className="p-10 rounded-2xl h-full lava-border light-hover-card">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700" />
                 <motion.div whileHover={{ rotate: 10, scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Target className="icon-lava w-12 h-12 text-primary mb-6" />
+                  <Target className="hover-icon icon-lava w-12 h-12 text-primary mb-6" />
                 </motion.div>
-                <h3 className="text-3xl font-bold mb-4 text-white">Vision</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">To become the central intelligence layer for modern organizations, where our AI systems autonomously evaluate complex data and optimize critical decisions across the entire enterprise.</p>
+                <h3 className="hover-title text-3xl font-bold mb-4 text-white">Vision</h3>
+                <p className="hover-desc text-muted-foreground text-lg leading-relaxed">To become the central intelligence layer for modern organizations, where our AI systems autonomously evaluate complex data and optimize critical decisions across the entire enterprise.</p>
               </TiltCard>
             </StaggerItem>
             <StaggerItem>
-              <TiltCard className="p-10 rounded-2xl h-full lava-border">
+              <TiltCard className="p-10 rounded-2xl h-full lava-border light-hover-card">
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700" />
                 <motion.div whileHover={{ rotate: -10, scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Zap className="icon-lava w-12 h-12 text-primary mb-6" />
+                  <Zap className="hover-icon icon-lava w-12 h-12 text-primary mb-6" />
                 </motion.div>
-                <h3 className="text-3xl font-bold mb-4 text-white">Mission</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">To engineer uncompromised, precision-driven AI products that replace manual evaluation with instant, unbiased intelligence, allowing human capital to focus purely on strategic execution.</p>
+                <h3 className="hover-title text-3xl font-bold mb-4 text-white">Mission</h3>
+                <p className="hover-desc text-muted-foreground text-lg leading-relaxed">To engineer uncompromised, precision-driven AI products that replace manual evaluation with instant, unbiased intelligence, allowing human capital to focus purely on strategic execution.</p>
               </TiltCard>
             </StaggerItem>
           </StaggerGrid>
@@ -527,14 +527,14 @@ export default function Home() {
               { title: "Autonomous Evaluation", desc: "Systems that expand beyond hiring into compliance, security, and code review." }
             ].map((model, i) => (
               <StaggerItem key={i}>
-                <TiltCard className="p-8 rounded-xl lava-border">
+                <TiltCard className="p-8 rounded-xl lava-border light-hover-card">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors duration-300">{model.title}</h3>
+                    <h3 className="hover-title text-2xl font-bold text-white transition-colors duration-300">{model.title}</h3>
                     <motion.div whileHover={{ rotate: 45, scale: 1.2 }} transition={{ type: "spring", stiffness: 400 }}>
                       <ChevronUp className="w-6 h-6 text-primary/40" />
                     </motion.div>
                   </div>
-                  <p className="text-muted-foreground">{model.desc}</p>
+                  <p className="hover-desc text-muted-foreground">{model.desc}</p>
                 </TiltCard>
               </StaggerItem>
             ))}
