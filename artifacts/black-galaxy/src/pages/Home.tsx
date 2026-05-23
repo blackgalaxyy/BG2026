@@ -509,13 +509,6 @@ export default function Home() {
           <FadeIn className="mb-12">
             <div className="relative rounded-2xl overflow-hidden border border-white/8 h-56 group">
               <img src={roadmapImage} alt="Future AI Models" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent" />
-              <div className="absolute inset-0 flex items-center px-10">
-                <div>
-                  <p className="text-xs font-bold tracking-widest uppercase text-primary mb-2">Roadmap 2025–2027</p>
-                  <p className="text-2xl font-black text-white">The Next Generation<br />of Autonomous Systems</p>
-                </div>
-              </div>
             </div>
           </FadeIn>
 
