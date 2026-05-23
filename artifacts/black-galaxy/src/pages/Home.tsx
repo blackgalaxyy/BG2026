@@ -271,18 +271,6 @@ export default function Home() {
         {/* All hero content — vertically + horizontally centred */}
         <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto w-full pointer-events-none">
 
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.23,1,0.32,1] }}
-            className="mb-8"
-          >
-            <span className="inline-block px-5 py-2 rounded-full border border-primary/40 bg-black/50 text-primary text-xs font-bold tracking-[0.22em] uppercase backdrop-blur-md">
-              The Future of Autonomous Evaluation
-            </span>
-          </motion.div>
-
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-[5.2rem] font-black tracking-tight leading-[1.1] mb-6">
             {/* Line 1: Engineering (white) + Intelligence (orange) */}
