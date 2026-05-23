@@ -453,7 +453,7 @@ export default function Home() {
                 <div className="inline-block px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">Flagship Model</div>
                 <h2 className="text-4xl md:text-6xl font-black mb-6 text-white leading-tight">
                   VYONA<br />
-                  <span className="text-gradient-lava text-3xl md:text-4xl">Candidate Intelligence Engine</span>
+                  <span className="text-gradient-lava text-3xl md:text-4xl">Candidate Assessment Engine</span>
                 </h2>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                   Vyona is not an ATS. It is an autonomous intelligence system that reads, analyzes, and evaluates technical talent with the precision of a Senior Engineering Manager.
