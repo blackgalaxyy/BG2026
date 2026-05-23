@@ -472,10 +472,11 @@ export default function Home() {
                 </p>
                 <ul className="space-y-4 mb-10">
                   {[
-                    'Deep syntax and logic evaluation of code submissions',
-                    'Pattern recognition across thousands of candidate profiles',
-                    'Instant, bias-free competency scoring',
-                    'Automated technical interviewing and assessment'
+                    'Dynamic AI interviews (Dynamic questions)',
+                    'Resume-based question generation',
+                    'Multi-parameter evaluation',
+                    'Structured employability scoring',
+                    '100+ MCQ questions'
                   ].map((feature, i) => (
                     <motion.li
                       key={i}
