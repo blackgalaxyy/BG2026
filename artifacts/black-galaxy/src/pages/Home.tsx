@@ -308,7 +308,7 @@ function ContactForm() {
           {([
             { label: 'Full Name', name: 'full_name', type: 'text', placeholder: 'Aarav Sharma' },
             { label: 'Corporate Email', name: 'email', type: 'email', placeholder: 'aarav@company.com' },
-            { label: 'Company', name: 'company', type: 'text', placeholder: 'Infosys Ltd.' },
+            { label: 'Company', name: 'company', type: 'text', placeholder: 'RF Solutions' },
           ] as const).map(({ label, name, type, placeholder }) => (
             <div key={name} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <label style={{ fontSize: '0.875rem', fontWeight: 500, color: 'rgba(255,255,255,0.7)' }}>{label}</label>
@@ -339,7 +339,7 @@ function ContactForm() {
               value={form.message}
               onChange={handleChange}
               required
-              placeholder="e.g. Aarav Solutions — tell us more about your business needs..."
+              placeholder="Tell us more about your business needs..."
               rows={4}
               style={{
                 padding: '12px 16px', borderRadius: '8px',
