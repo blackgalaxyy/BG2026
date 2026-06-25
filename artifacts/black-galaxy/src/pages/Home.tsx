@@ -594,18 +594,18 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('/images/neural-bg.png')] bg-cover bg-center opacity-[0.04] mix-blend-luminosity pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SectionHeading label="Business Partners" title="Our" accent="Business Partners" sub="Collaborating with industry leaders to build innovative AI solutions." />
-          <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               { name: "WiZ-BoX", logo: partnerWizBox },
               { name: "Skylead Global", logo: partnerSkylead },
               { name: "WiZdomEd", logo: partnerWizdomed },
             ].map((partner, i) => (
               <StaggerItem key={i}>
-                <div className="rounded-2xl border border-white/8 hover:border-primary/40 transition-all duration-300 group overflow-hidden h-44">
+                <div className="flex items-center justify-center rounded-2xl border border-white/6 bg-[#0d0d0d] h-36 px-8 hover:border-primary/30 hover:bg-[#111111] transition-all duration-300 group overflow-hidden">
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    className="max-h-20 max-w-full w-auto object-contain opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-400"
                   />
                 </div>
               </StaggerItem>
