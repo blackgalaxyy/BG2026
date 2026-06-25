@@ -11,6 +11,8 @@ import partnerWizBox from '@assets/WhatsApp_Image_2026-06-24_at_1.46.29_PM_17823
 import partnerSkylead from '@assets/WhatsApp_Image_2026-06-24_at_1.44.47_PM_1782366001216.jpeg';
 import partnerWizdomed from '@assets/WhatsApp_Image_2026-06-24_at_1.43.31_PM_1782366001216.jpeg';
 import codeviceSolutions from '@assets/codevice.png';
+import sudhiksha from '@assets/sudhiksha.png';
+import vruksh from '@assets/vruksh.png';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight, MessageCircle, Mail, Phone } from 'lucide-react';
@@ -597,7 +599,7 @@ export default function Home() {
                 </p>
                 <ul className="space-y-4 mb-10">
                   {[
-                    'Dynamic AI interviews with adaptive questioning',
+                    'Dynamic AI interviews with real-time questions and counter questions',
                     'Resume-based question generation',
                     'Role & domain-specific technical assessments',
                     'Comprehensive candidate evaluation',
@@ -734,6 +736,8 @@ export default function Home() {
               { name: "Skylead Global", logo: partnerSkylead },
               { name: "WiZ-BoX", logo: partnerWizBox },
               { name: "CodeviceSolutions", logo: codeviceSolutions },
+              { name: "Sudhiksha", logo: sudhiksha },
+              { name: "Vruksh", logo: vruksh },
             ].map((partner, i) => (
               <StaggerItem key={i}>
                 <div className="flex items-center justify-center rounded-2xl border border-white/6 bg-black h-52 px-6 py-6 hover:border-primary/30 hover:bg-black transition-all duration-300 group overflow-hidden">
