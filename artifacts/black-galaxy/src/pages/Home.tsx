@@ -306,9 +306,9 @@ function ContactForm() {
       ) : (
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           {([
-            { label: 'Full Name', name: 'full_name', type: 'text', placeholder: 'John Doe' },
-            { label: 'Corporate Email', name: 'email', type: 'email', placeholder: 'john@company.com' },
-            { label: 'Company', name: 'company', type: 'text', placeholder: 'Acme Inc.' },
+            { label: 'Full Name', name: 'full_name', type: 'text', placeholder: 'Aarav Sharma' },
+            { label: 'Corporate Email', name: 'email', type: 'email', placeholder: 'aarav@company.com' },
+            { label: 'Company', name: 'company', type: 'text', placeholder: 'Infosys Ltd.' },
           ] as const).map(({ label, name, type, placeholder }) => (
             <div key={name} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <label style={{ fontSize: '0.875rem', fontWeight: 500, color: 'rgba(255,255,255,0.7)' }}>{label}</label>
