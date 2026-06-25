@@ -10,6 +10,7 @@ import techBannerImage from '@assets/ChatGPT_Image_May_23,_2026,_10_00_56_PM_177
 import partnerWizBox from '@assets/WhatsApp_Image_2026-06-24_at_1.46.29_PM_1782366001214.jpeg';
 import partnerSkylead from '@assets/WhatsApp_Image_2026-06-24_at_1.44.47_PM_1782366001216.jpeg';
 import partnerWizdomed from '@assets/WhatsApp_Image_2026-06-24_at_1.43.31_PM_1782366001216.jpeg';
+import codeviceSolutions from '@assets/codevice.png';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight, MessageCircle, Mail, Phone } from 'lucide-react';
@@ -732,6 +733,7 @@ export default function Home() {
               { name: "WiZdomEd", logo: partnerWizdomed },
               { name: "Skylead Global", logo: partnerSkylead },
               { name: "WiZ-BoX", logo: partnerWizBox },
+              { name: "CodeviceSolutions", logo: codeviceSolutions },
             ].map((partner, i) => (
               <StaggerItem key={i}>
                 <div className="flex items-center justify-center rounded-2xl border border-white/6 bg-black h-52 px-6 py-6 hover:border-primary/30 hover:bg-black transition-all duration-300 group overflow-hidden">
