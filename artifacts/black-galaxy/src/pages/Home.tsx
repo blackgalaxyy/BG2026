@@ -275,7 +275,7 @@ function ContactForm() {
   return (
     <TiltCard className="p-10 rounded-2xl">
       <div className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-primary via-orange-400 to-primary animate-[shimmer_3s_linear_infinite] bg-[length:200%_auto]" />
-      <h3 className="text-2xl font-bold mb-8 text-white">Request System Access</h3>
+      <h3 className="text-2xl font-bold mb-8 text-white">Connect With Us</h3>
       {status === 'success' ? (
         <div className="flex flex-col items-center justify-center py-12 text-center">
           <div className="w-16 h-16 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center mb-4">
