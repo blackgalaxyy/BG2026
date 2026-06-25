@@ -764,7 +764,6 @@ export default function Home() {
                     { icon: Globe, label: "Location", value: "Mysore, India" },
                     { icon: Zap, label: "Email", value: "admin@blackgalaxy.co.in", href: "mailto:admin@blackgalaxy.co.in" },
                     { icon: Target, label: "Phone", value: "+91 7204650153" },
-                    { icon: MessageCircle, label: "Chat with us", value: "WhatsApp — Black Galaxy", href: "https://wa.me/917204257430" },
                   ].map(({ icon: Icon, label, value, href }: any, i) => (
                     <motion.div
                       key={i}
