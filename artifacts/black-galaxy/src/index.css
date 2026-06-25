@@ -257,6 +257,10 @@
 }
 
 /* ─── Cursor glow ─── */
+.no-tilt:hover, .no-tilt {
+  transform: none !important;
+}
+
 .cursor-glow {
   position: fixed;
   width: 350px;

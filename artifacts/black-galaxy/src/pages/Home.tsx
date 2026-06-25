@@ -273,7 +273,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="relative p-10 rounded-2xl glass-card" style={{ transform: 'none' }}>
+    <div className="relative p-10 rounded-2xl glass-card no-tilt">
       <div className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-primary via-orange-400 to-primary animate-[shimmer_3s_linear_infinite] bg-[length:200%_auto]" />
       <h3 className="text-2xl font-bold mb-8 text-white">Connect With Us</h3>
       {status === 'success' ? (
