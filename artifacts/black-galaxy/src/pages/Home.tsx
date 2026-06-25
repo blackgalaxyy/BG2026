@@ -601,11 +601,11 @@ export default function Home() {
               { name: "WiZdomEd", logo: partnerWizdomed },
             ].map((partner, i) => (
               <StaggerItem key={i}>
-                <div className="flex items-center justify-center rounded-2xl border border-white/6 bg-[#0d0d0d] h-36 px-8 hover:border-primary/30 hover:bg-[#111111] transition-all duration-300 group overflow-hidden">
+                <div className="flex items-center justify-center rounded-2xl border border-white/6 bg-[#0d0d0d] h-52 px-6 py-6 hover:border-primary/30 hover:bg-[#111111] transition-all duration-300 group overflow-hidden">
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-20 max-w-full w-auto object-contain opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-400"
+                    className="w-full h-full object-contain opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-400"
                   />
                 </div>
               </StaggerItem>
