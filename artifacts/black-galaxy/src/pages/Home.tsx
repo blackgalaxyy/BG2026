@@ -596,11 +596,12 @@ export default function Home() {
                 </p>
                 <ul className="space-y-4 mb-10">
                   {[
-                    'Dynamic AI interviews (Dynamic questions)',
+                    'Dynamic AI interviews with adaptive questioning',
                     'Resume-based question generation',
-                    'Multi-parameter evaluation',
+                    'Role & domain-specific technical assessments',
+                    'Comprehensive candidate evaluation',
                     'Structured employability scoring',
-                    '100+ MCQ questions'
+                    '100+ technical MCQ questions'
                   ].map((feature, i) => (
                     <motion.li
                       key={i}
@@ -615,7 +616,7 @@ export default function Home() {
                     </motion.li>
                   ))}
                 </ul>
-                <motion.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
+                <motion.a href="https://vyona.app.blackgalaxy.co.in/" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
                   className="px-8 py-4 rounded-md btn-lava text-lg font-bold tracking-wide inline-flex items-center justify-center gap-2"
                 >
                   Explore Vyona <ChevronRight size={20} />
