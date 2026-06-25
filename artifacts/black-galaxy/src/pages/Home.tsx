@@ -12,7 +12,7 @@ import partnerSkylead from '@assets/WhatsApp_Image_2026-06-24_at_1.44.47_PM_1782
 import partnerWizdomed from '@assets/WhatsApp_Image_2026-06-24_at_1.43.31_PM_1782366001216.jpeg';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight, MessageCircle } from 'lucide-react';
+import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight, MessageCircle, Mail, Phone } from 'lucide-react';
 
 // ─── Animated section reveal ─────────────────────────────────────────
 const FadeIn = ({ children, delay = 0, className = "", direction = "up" as "up"|"left"|"right"|"none" }: {
@@ -762,8 +762,8 @@ export default function Home() {
                 <div className="space-y-6">
                   {[
                     { icon: Globe, label: "Location", value: "Mangaluru, India" },
-                    { icon: Zap, label: "Email", value: "admin@blackgalaxy.co.in", href: "mailto:admin@blackgalaxy.co.in" },
-                    { icon: Target, label: "Phone", value: "+91 72042 57430" },
+                    { icon: Mail, label: "Email", value: "admin@blackgalaxy.co.in", href: "mailto:admin@blackgalaxy.co.in" },
+                    { icon: Phone, label: "Phone", value: "+91 72042 57430" },
                   ].map(({ icon: Icon, label, value, href }: any, i) => (
                     <motion.div
                       key={i}
