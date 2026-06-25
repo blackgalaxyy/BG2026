@@ -589,29 +589,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── OUR CLIENTS ── */}
-      <section className="py-32 relative" style={{ backgroundColor: '#12121c' }}>
-        <div className="absolute inset-0 bg-grid opacity-8 pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <SectionHeading label="Clients" title="Our" accent="Clients" sub="Trusted by forward-thinking organizations leveraging AI to transform their operations." />
-          <StaggerGrid className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {/* Add client logos here — follow the same pattern as partners below */}
-            {[
-              { name: "Client 1" },
-              { name: "Client 2" },
-              { name: "Client 3" },
-              { name: "Client 4" },
-            ].map((client, i) => (
-              <StaggerItem key={i}>
-                <div className="flex items-center justify-center rounded-2xl border border-white/8 bg-white/3 backdrop-blur-sm h-28 px-6 hover:border-primary/40 hover:bg-white/5 transition-all duration-300 group">
-                  <span className="text-muted-foreground/40 text-sm font-medium tracking-wide uppercase group-hover:text-muted-foreground/60 transition-colors duration-300">{client.name}</span>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerGrid>
-        </div>
-      </section>
-
       {/* ── OUR PARTNERS ── */}
       <section className="py-32 relative">
         <div className="absolute inset-0 bg-[url('/images/neural-bg.png')] bg-cover bg-center opacity-[0.04] mix-blend-luminosity pointer-events-none" />
