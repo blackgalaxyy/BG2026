@@ -108,7 +108,7 @@ const StatCounter = ({ target, suffix = "", prefix = "" }: { target: number; suf
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("Home");
-  const sections = ['Home', 'About', 'Products', 'Technology', 'Contact'];
+  const sections = ['Home', 'About', 'Products', 'Technology', 'Partners', 'Contact'];
 
   useEffect(() => {
     const onScroll = () => {
@@ -590,7 +590,7 @@ export default function Home() {
       </section>
 
       {/* ── OUR PARTNERS ── */}
-      <section className="py-32 relative">
+      <section id="partners" className="py-32 relative">
         <div className="absolute inset-0 bg-[url('/images/neural-bg.png')] bg-cover bg-center opacity-[0.04] mix-blend-luminosity pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SectionHeading label="Business Partners" title="Our Esteemed" accent="Business Partners" sub="Collaborating with industry leaders to build innovative AI solutions." />
@@ -601,7 +601,7 @@ export default function Home() {
               { name: "WiZdomEd", logo: partnerWizdomed },
             ].map((partner, i) => (
               <StaggerItem key={i}>
-                <div className="flex items-center justify-center rounded-2xl border border-white/6 bg-[#0d0d0d] h-52 px-6 py-6 hover:border-primary/30 hover:bg-[#111111] transition-all duration-300 group overflow-hidden">
+                <div className="flex items-center justify-center rounded-2xl border border-white/6 bg-black h-52 px-6 py-6 hover:border-primary/30 hover:bg-black transition-all duration-300 group overflow-hidden">
                   <img
                     src={partner.logo}
                     alt={partner.name}
