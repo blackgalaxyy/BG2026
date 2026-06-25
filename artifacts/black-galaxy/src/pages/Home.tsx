@@ -137,7 +137,7 @@ const Navbar = () => {
             alt="Black Galaxy"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
-            className="h-16 w-auto object-contain"
+            className="h-24 w-auto object-contain"
           />
         </a>
         <div className="hidden md:flex items-center gap-8">
@@ -213,7 +213,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
         <div className="col-span-1 md:col-span-2">
           <div className="flex items-center mb-6">
-            <img src={logoImage} alt="Black Galaxy" className="h-20 w-auto object-contain" />
+            <img src={logoImage} alt="Black Galaxy" className="h-28 w-auto object-contain" />
           </div>
           <p className="text-muted-foreground max-w-sm leading-relaxed">Engineering intelligence systems for the real world. We build AI that evaluates, decides, and optimizes at scale.</p>
         </div>
