@@ -450,7 +450,7 @@
   align-items: center;
   gap: 24px;
   width: max-content;
-  animation: marquee 25s linear infinite;
+  animation: marquee 60s linear infinite;
   will-change: transform;
 }
 
@@ -461,7 +461,6 @@
 .partner-card {
   width: 280px;
   height: 180px;
-
   flex-shrink: 0;
 
   display: flex;
@@ -474,7 +473,7 @@
   border: 1px solid rgba(255,255,255,.08);
   border-radius: 20px;
 
-  transition: all .35s ease;
+  transition: all 0.35s ease;
 }
 
 .partner-card:hover {
@@ -488,7 +487,7 @@
   max-width: 180px;
   max-height: 90px;
   object-fit: contain;
-  transition: transform .35s ease;
+  transition: transform 0.35s ease;
 }
 
 .partner-card:hover .partner-logo {
@@ -497,10 +496,10 @@
 
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
