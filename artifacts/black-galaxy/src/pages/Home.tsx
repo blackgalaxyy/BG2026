@@ -7,6 +7,9 @@ import vyonaLogo from '@assets/ChatGPT_Image_May_23,_2026,_09_52_41_PM_177955338
 import aiHandImage from '@assets/image_1776935166898.png';
 import roadmapImage from '@assets/ChatGPT_Image_Apr_23,_2026,_02_39_59_PM_1776935435195.png';
 import techBannerImage from '@assets/ChatGPT_Image_May_23,_2026,_10_00_56_PM_1779553872430.png';
+import partnerWizBox from '@assets/WhatsApp_Image_2026-06-24_at_1.46.29_PM_1782366001214.jpeg';
+import partnerSkylead from '@assets/WhatsApp_Image_2026-06-24_at_1.44.47_PM_1782366001216.jpeg';
+import partnerWizdomed from '@assets/WhatsApp_Image_2026-06-24_at_1.43.31_PM_1782366001216.jpeg';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight } from 'lucide-react';
@@ -580,6 +583,54 @@ export default function Home() {
                   <h3 className="text-2xl font-bold mb-4 text-white">{c.title}</h3>
                   <p className="text-muted-foreground">{c.desc}</p>
                 </TiltCard>
+              </StaggerItem>
+            ))}
+          </StaggerGrid>
+        </div>
+      </section>
+
+      {/* ── OUR CLIENTS ── */}
+      <section className="py-32 relative" style={{ backgroundColor: '#12121c' }}>
+        <div className="absolute inset-0 bg-grid opacity-8 pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <SectionHeading label="Clients" title="Our" accent="Clients" sub="Trusted by forward-thinking organizations leveraging AI to transform their operations." />
+          <StaggerGrid className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {/* Add client logos here — follow the same pattern as partners below */}
+            {[
+              { name: "Client 1" },
+              { name: "Client 2" },
+              { name: "Client 3" },
+              { name: "Client 4" },
+            ].map((client, i) => (
+              <StaggerItem key={i}>
+                <div className="flex items-center justify-center rounded-2xl border border-white/8 bg-white/3 backdrop-blur-sm h-28 px-6 hover:border-primary/40 hover:bg-white/5 transition-all duration-300 group">
+                  <span className="text-muted-foreground/40 text-sm font-medium tracking-wide uppercase group-hover:text-muted-foreground/60 transition-colors duration-300">{client.name}</span>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerGrid>
+        </div>
+      </section>
+
+      {/* ── OUR PARTNERS ── */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-[url('/images/neural-bg.png')] bg-cover bg-center opacity-[0.04] mix-blend-luminosity pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <SectionHeading label="Partners" title="Our" accent="Partners" sub="Collaborating with industry leaders to build innovative AI solutions." />
+          <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { name: "WiZ-BoX", logo: partnerWizBox },
+              { name: "Skylead Global", logo: partnerSkylead },
+              { name: "WiZdomEd", logo: partnerWizdomed },
+            ].map((partner, i) => (
+              <StaggerItem key={i}>
+                <div className="flex items-center justify-center rounded-2xl border border-white/8 bg-white/3 backdrop-blur-sm h-36 px-8 hover:border-primary/40 hover:bg-white/5 transition-all duration-300 group overflow-hidden">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-20 max-w-full w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300 filter brightness-110"
+                  />
+                </div>
               </StaggerItem>
             ))}
           </StaggerGrid>
