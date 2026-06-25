@@ -246,6 +246,94 @@ const Footer = () => (
 );
 
 // ─── Main Home ───────────────────────────────────────────────────────
+// ─── Contact Form ─────────────────────────────────────────────────────
+function ContactForm() {
+  const [form, setForm] = useState({ full_name: '', email: '', company: '', message: '' });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error('Failed');
+      setStatus('success');
+      setForm({ full_name: '', email: '', company: '', message: '' });
+    } catch {
+      setStatus('error');
+    }
+  };
+
+  return (
+    <TiltCard className="p-10 rounded-2xl">
+      <div className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-primary via-orange-400 to-primary animate-[shimmer_3s_linear_infinite] bg-[length:200%_auto]" />
+      <h3 className="text-2xl font-bold mb-8 text-white">Request System Access</h3>
+      {status === 'success' ? (
+        <div className="flex flex-col items-center justify-center py-12 text-center">
+          <div className="w-16 h-16 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center mb-4">
+            <Zap className="w-8 h-8 text-primary" />
+          </div>
+          <h4 className="text-xl font-bold text-white mb-2">Message Received</h4>
+          <p className="text-muted-foreground">We'll be in touch shortly.</p>
+          <button onClick={() => setStatus('idle')} className="mt-6 text-sm text-primary hover:underline">Send another</button>
+        </div>
+      ) : (
+        <form className="space-y-5" onSubmit={handleSubmit}>
+          {[
+            { label: "Full Name", name: "full_name", type: "text", placeholder: "John Doe" },
+            { label: "Corporate Email", name: "email", type: "email", placeholder: "john@company.com" },
+            { label: "Company", name: "company", type: "text", placeholder: "Acme Inc." },
+          ].map(({ label, name, type, placeholder }) => (
+            <div key={name} className="space-y-2">
+              <label className="text-sm font-medium text-white/70">{label}</label>
+              <Input
+                type={type}
+                name={name}
+                value={form[name as keyof typeof form]}
+                onChange={handleChange}
+                required
+                className="bg-background/40 border-white/8 focus:border-primary text-white h-12 transition-all duration-300 focus:shadow-[0_0_20px_rgba(255,80,0,0.15)]"
+                placeholder={placeholder}
+              />
+            </div>
+          ))}
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-white/70">Operational Needs</label>
+            <Textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              required
+              className="bg-background/40 border-white/8 focus:border-primary text-white min-h-[110px] transition-all duration-300 focus:shadow-[0_0_20px_rgba(255,80,0,0.15)]"
+              placeholder="Tell us about the systems you want to automate..."
+            />
+          </div>
+          {status === 'error' && (
+            <p className="text-red-400 text-sm">Something went wrong. Please try again.</p>
+          )}
+          <motion.button
+            type="submit"
+            disabled={status === 'loading'}
+            whileHover={{ scale: status === 'loading' ? 1 : 1.02 }}
+            whileTap={{ scale: status === 'loading' ? 1 : 0.98 }}
+            className="w-full h-14 btn-lava text-lg font-bold rounded-md disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            {status === 'loading' ? 'Sending...' : 'Initialize Contact'}
+          </motion.button>
+        </form>
+      )}
+    </TiltCard>
+  );
+}
+
 export default function Home() {
 
   return (
@@ -658,34 +746,7 @@ export default function Home() {
             </div>
 
             <FadeIn delay={0.2} direction="right">
-              <TiltCard className="p-10 rounded-2xl">
-                <div className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-primary via-orange-400 to-primary animate-[shimmer_3s_linear_infinite] bg-[length:200%_auto]" />
-                <h3 className="text-2xl font-bold mb-8 text-white">Request System Access</h3>
-                <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-                  {[
-                    { label: "Full Name", type: "text", placeholder: "John Doe" },
-                    { label: "Corporate Email", type: "email", placeholder: "john@company.com" },
-                    { label: "Company", type: "text", placeholder: "Acme Inc." },
-                  ].map(({ label, type, placeholder }) => (
-                    <div key={label} className="space-y-2">
-                      <label className="text-sm font-medium text-white/70">{label}</label>
-                      <Input type={type} className="bg-background/40 border-white/8 focus:border-primary text-white h-12 transition-all duration-300 focus:shadow-[0_0_20px_rgba(255,80,0,0.15)]" placeholder={placeholder} />
-                    </div>
-                  ))}
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-white/70">Operational Needs</label>
-                    <Textarea className="bg-background/40 border-white/8 focus:border-primary text-white min-h-[110px] transition-all duration-300 focus:shadow-[0_0_20px_rgba(255,80,0,0.15)]" placeholder="Tell us about the systems you want to automate..." />
-                  </div>
-                  <motion.button
-                    type="submit"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full h-14 btn-lava text-lg font-bold rounded-md"
-                  >
-                    Initialize Contact
-                  </motion.button>
-                </form>
-              </TiltCard>
+              <ContactForm />
             </FadeIn>
           </div>
         </div>
