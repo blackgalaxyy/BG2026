@@ -12,7 +12,7 @@ import partnerSkylead from '@assets/WhatsApp_Image_2026-06-24_at_1.44.47_PM_1782
 import partnerWizdomed from '@assets/WhatsApp_Image_2026-06-24_at_1.43.31_PM_1782366001216.jpeg';
 import codeviceSolutions from '@assets/codevice.png';
 import sudhiksha from '@assets/sudhiksha.png';
-import vruksh from '@assets/vruksh.png';
+import vruksh from '@assets/vruksh_logo.png';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronRight, Cpu, Layers, BarChart, Shield, Zap, Target, Globe, ChevronUp, ArrowRight, MessageCircle, Mail, Phone } from 'lucide-react';
