@@ -761,9 +761,9 @@ export default function Home() {
                 <p className="text-xl text-muted-foreground mb-12">Stop relying on outdated manual processes. Deploy autonomous intelligence systems that scale infinitely and decide precisely.</p>
                 <div className="space-y-6">
                   {[
-                    { icon: Globe, label: "Location", value: "Mysore, India" },
+                    { icon: Globe, label: "Location", value: "Mangaluru, India" },
                     { icon: Zap, label: "Email", value: "admin@blackgalaxy.co.in", href: "mailto:admin@blackgalaxy.co.in" },
-                    { icon: Target, label: "Phone", value: "+91 7204650153" },
+                    { icon: Target, label: "Phone", value: "+91 72042 57430" },
                   ].map(({ icon: Icon, label, value, href }: any, i) => (
                     <motion.div
                       key={i}
