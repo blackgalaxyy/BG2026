@@ -729,9 +729,9 @@ export default function Home() {
           <SectionHeading label="Business Partners" title="Our Esteemed" accent="Business Partners" sub="Collaborating with industry leaders to build innovative AI solutions." />
           <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
-              { name: "WiZ-BoX", logo: partnerWizBox },
-              { name: "Skylead Global", logo: partnerSkylead },
               { name: "WiZdomEd", logo: partnerWizdomed },
+              { name: "Skylead Global", logo: partnerSkylead },
+              { name: "WiZ-BoX", logo: partnerWizBox },
             ].map((partner, i) => (
               <StaggerItem key={i}>
                 <div className="flex items-center justify-center rounded-2xl border border-white/6 bg-black h-52 px-6 py-6 hover:border-primary/30 hover:bg-black transition-all duration-300 group overflow-hidden">
