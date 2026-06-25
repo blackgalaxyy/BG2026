@@ -383,6 +383,15 @@ function ContactForm() {
 
 export default function Home() {
 
+  const partners = [
+    { name: "WiZdomEd", logo: partnerWizdomed },
+    { name: "Skylead Global", logo: partnerSkylead },
+    { name: "WiZ-BoX", logo: partnerWizBox },
+    { name: "Codevice Solutions", logo: codeviceSolutions },
+    { name: "Sudhiksha", logo: sudhiksha },
+    { name: "Vruksh", logo: vruksh },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-hidden">
       <ScrollProgress />
@@ -725,11 +734,13 @@ export default function Home() {
         </div>
       </section>
 
-     {/* ── OUR PARTNERS ── */}
+    {/* ── OUR PARTNERS ── */}
 <section id="partners" className="py-32 relative overflow-hidden">
-  <div className="absolute inset-0 bg-[url('/images/neural-bg.png')] bg-cover bg-center opacity-[0.04] mix-blend-luminosity pointer-events-none" />
+
+  <div className="absolute inset-0 bg-[url('/images/neural-bg.png')] bg-cover bg-center opacity-[0.04] pointer-events-none" />
 
   <div className="max-w-7xl mx-auto px-6 relative z-10">
+
     <SectionHeading
       label="Business Partners"
       title="Our Esteemed"
@@ -737,40 +748,35 @@ export default function Home() {
       sub="Collaborating with industry leaders to build innovative AI solutions."
     />
 
+    {/* Partners Marquee */}
     <div className="relative overflow-hidden mt-16">
-      <div className="flex animate-marquee whitespace-nowrap">
 
-        {[
-          { name: "WiZdomEd", logo: partnerWizdomed },
-          { name: "Skylead Global", logo: partnerSkylead },
-          { name: "WiZ-BoX", logo: partnerWizBox },
-          { name: "Codevice Solutions", logo: codeviceSolutions },
-          { name: "Sudhiksha", logo: sudhiksha },
-          { name: "Vruksh", logo: vruksh },
+      <div className="marquee">
 
-          // Duplicate for infinite scrolling
-          { name: "WiZdomEd", logo: partnerWizdomed },
-          { name: "Skylead Global", logo: partnerSkylead },
-          { name: "WiZ-BoX", logo: partnerWizBox },
-          { name: "Codevice Solutions", logo: codeviceSolutions },
-          { name: "Sudhiksha", logo: sudhiksha },
-          { name: "Vruksh", logo: vruksh },
-        ].map((partner, index) => (
+        {[...partners, ...partners].map((partner, index) => (
+
           <div
             key={index}
-            className="mx-6 flex-shrink-0 flex items-center justify-center w-64 h-44 rounded-2xl border border-white/10 bg-black hover:border-primary/40 transition-all duration-300"
+            className="partner-card"
           >
             <img
               src={partner.logo}
               alt={partner.name}
-              className="max-h-24 object-contain transition-transform duration-300 hover:scale-110"
+              className="partner-logo"
             />
           </div>
+
         ))}
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+    
       {/* ── CONTACT ── */}
       <section id="contact" className="py-32 relative border-t border-white/5" style={{ backgroundColor: '#12121c' }}>
         <div className="absolute inset-0 bg-grid opacity-8 pointer-events-none" />

@@ -440,3 +440,67 @@
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #0f0f18; }
 ::-webkit-scrollbar-thumb { background: linear-gradient(#ff4500, #ff8c00); border-radius: 3px; }
+
+/* =========================================
+   PARTNER MARQUEE
+========================================= */
+
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+  will-change: transform;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+.partner-card {
+  width: 280px;
+  height: 180px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: #000;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 20px;
+
+  transition: all .35s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-6px);
+  border-color: #ff5a00;
+  box-shadow: 0 0 35px rgba(255,90,0,.35);
+}
+
+.partner-logo {
+  width: auto;
+  max-width: 180px;
+  max-height: 90px;
+  object-fit: contain;
+  transition: transform .35s ease;
+}
+
+.partner-card:hover .partner-logo {
+  transform: scale(1.08);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
