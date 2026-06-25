@@ -273,61 +273,105 @@ function ContactForm() {
   };
 
   return (
-    <div className="relative p-10 rounded-2xl glass-card no-tilt">
-      <div className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-primary via-orange-400 to-primary animate-[shimmer_3s_linear_infinite] bg-[length:200%_auto]" />
-      <h3 className="text-2xl font-bold mb-8 text-white">Connect With Us</h3>
+    <div style={{
+      position: 'relative',
+      padding: '40px',
+      borderRadius: '16px',
+      background: 'rgba(28,28,40,0.85)',
+      border: '1px solid rgba(255,90,0,0.2)',
+      boxShadow: '0 4px 40px rgba(0,0,0,0.6)',
+      backdropFilter: 'blur(12px)',
+    }}>
+      <div style={{
+        position: 'absolute', top: 0, left: 0, right: 0, height: '3px',
+        borderRadius: '16px 16px 0 0',
+        background: 'linear-gradient(90deg, #ff4500, #ff8c00, #ff4500)',
+      }} />
+      <h3 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#fff', marginBottom: '2rem' }}>Connect With Us</h3>
+
       {status === 'success' ? (
-        <div className="flex flex-col items-center justify-center py-12 text-center">
-          <div className="w-16 h-16 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center mb-4">
-            <Zap className="w-8 h-8 text-primary" />
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '48px 0', textAlign: 'center' }}>
+          <div style={{ width: 64, height: 64, borderRadius: '50%', background: 'rgba(255,80,0,0.15)', border: '1px solid rgba(255,80,0,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
+            <Zap style={{ width: 32, height: 32, color: 'var(--primary)' }} />
           </div>
-          <h4 className="text-xl font-bold text-white mb-2">Message Received</h4>
-          <p className="text-muted-foreground">We'll be in touch shortly.</p>
-          <button onClick={() => setStatus('idle')} className="mt-6 text-sm text-primary hover:underline">Send another</button>
+          <h4 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#fff', marginBottom: '0.5rem' }}>Message Received</h4>
+          <p style={{ color: 'rgba(255,255,255,0.5)' }}>We'll be in touch shortly.</p>
+          <button
+            onClick={() => { setStatus('idle'); setForm({ full_name: '', email: '', company: '', message: '' }); }}
+            style={{ marginTop: '1.5rem', fontSize: '0.875rem', color: '#ff6030', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}
+          >
+            Send another
+          </button>
         </div>
       ) : (
-        <form className="space-y-5" onSubmit={handleSubmit}>
-          {[
-            { label: "Full Name", name: "full_name", type: "text", placeholder: "John Doe" },
-            { label: "Corporate Email", name: "email", type: "email", placeholder: "john@company.com" },
-            { label: "Company", name: "company", type: "text", placeholder: "Acme Inc." },
-          ].map(({ label, name, type, placeholder }) => (
-            <div key={name} className="space-y-2">
-              <label className="text-sm font-medium text-white/70">{label}</label>
-              <Input
+        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+          {([
+            { label: 'Full Name', name: 'full_name', type: 'text', placeholder: 'John Doe' },
+            { label: 'Corporate Email', name: 'email', type: 'email', placeholder: 'john@company.com' },
+            { label: 'Company', name: 'company', type: 'text', placeholder: 'Acme Inc.' },
+          ] as const).map(({ label, name, type, placeholder }) => (
+            <div key={name} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <label style={{ fontSize: '0.875rem', fontWeight: 500, color: 'rgba(255,255,255,0.7)' }}>{label}</label>
+              <input
                 type={type}
                 name={name}
-                value={form[name as keyof typeof form]}
+                value={form[name]}
                 onChange={handleChange}
                 required
-                className="bg-background/40 border-white/8 focus:border-primary text-white h-12 transition-all duration-300 focus:shadow-[0_0_20px_rgba(255,80,0,0.15)]"
                 placeholder={placeholder}
+                style={{
+                  height: '48px', padding: '0 16px', borderRadius: '8px',
+                  background: 'rgba(255,255,255,0.05)',
+                  border: '1px solid rgba(255,255,255,0.12)',
+                  color: '#fff', fontSize: '1rem', outline: 'none',
+                  transition: 'border-color 0.2s',
+                  position: 'relative', zIndex: 10,
+                }}
+                onFocus={e => { e.target.style.borderColor = '#ff5000'; }}
+                onBlur={e => { e.target.style.borderColor = 'rgba(255,255,255,0.12)'; }}
               />
             </div>
           ))}
-          <div className="space-y-2">
-            <label className="text-sm font-medium text-white/70">Operational Needs</label>
-            <Textarea
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <label style={{ fontSize: '0.875rem', fontWeight: 500, color: 'rgba(255,255,255,0.7)' }}>Operational Needs</label>
+            <textarea
               name="message"
               value={form.message}
               onChange={handleChange}
               required
-              className="bg-background/40 border-white/8 focus:border-primary text-white min-h-[110px] transition-all duration-300 focus:shadow-[0_0_20px_rgba(255,80,0,0.15)]"
               placeholder="Tell us about the systems you want to automate..."
+              rows={4}
+              style={{
+                padding: '12px 16px', borderRadius: '8px',
+                background: 'rgba(255,255,255,0.05)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                color: '#fff', fontSize: '1rem', outline: 'none', resize: 'vertical',
+                transition: 'border-color 0.2s',
+                position: 'relative', zIndex: 10,
+              }}
+              onFocus={e => { e.target.style.borderColor = '#ff5000'; }}
+              onBlur={e => { e.target.style.borderColor = 'rgba(255,255,255,0.12)'; }}
             />
           </div>
           {status === 'error' && (
-            <p className="text-red-400 text-sm">Something went wrong. Please try again.</p>
+            <p style={{ color: '#f87171', fontSize: '0.875rem' }}>Something went wrong. Please try again.</p>
           )}
-          <motion.button
+          <button
             type="submit"
             disabled={status === 'loading'}
-            whileHover={{ scale: status === 'loading' ? 1 : 1.02 }}
-            whileTap={{ scale: status === 'loading' ? 1 : 0.98 }}
-            className="w-full h-14 btn-lava text-lg font-bold rounded-md disabled:opacity-60 disabled:cursor-not-allowed"
+            style={{
+              height: '56px', borderRadius: '8px', border: 'none', cursor: 'pointer',
+              background: 'linear-gradient(135deg, #ff4500, #ff8c00)',
+              color: '#fff', fontSize: '1.125rem', fontWeight: 700,
+              opacity: status === 'loading' ? 0.6 : 1,
+              transition: 'opacity 0.2s, transform 0.1s',
+              position: 'relative', zIndex: 10,
+            }}
+            onMouseEnter={e => { if (status !== 'loading') (e.target as HTMLButtonElement).style.transform = 'scale(1.02)'; }}
+            onMouseLeave={e => { (e.target as HTMLButtonElement).style.transform = 'scale(1)'; }}
           >
             {status === 'loading' ? 'Sending...' : 'Initialize Contact'}
-          </motion.button>
+          </button>
         </form>
       )}
     </div>
