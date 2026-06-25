@@ -780,7 +780,7 @@ export default function Home() {
                       <div>
                         <h4 className="font-bold text-white">{label}</h4>
                         {href ? (
-                          <a href={href} className="text-muted-foreground hover:text-primary transition-colors">{value}</a>
+                          <a href={href} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">{value}</a>
                         ) : (
                           <p className="text-muted-foreground">{value}</p>
                         )}
