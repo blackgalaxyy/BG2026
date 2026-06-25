@@ -339,7 +339,7 @@ function ContactForm() {
               value={form.message}
               onChange={handleChange}
               required
-              placeholder="Tell us about the systems you want to automate..."
+              placeholder="e.g. Aarav Solutions — tell us more about your business needs..."
               rows={4}
               style={{
                 padding: '12px 16px', borderRadius: '8px',
