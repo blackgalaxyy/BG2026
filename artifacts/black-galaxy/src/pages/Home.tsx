@@ -593,7 +593,7 @@ export default function Home() {
       <section className="py-32 relative">
         <div className="absolute inset-0 bg-[url('/images/neural-bg.png')] bg-cover bg-center opacity-[0.04] mix-blend-luminosity pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <SectionHeading label="Business Partners" title="Our" accent="Business Partners" sub="Collaborating with industry leaders to build innovative AI solutions." />
+          <SectionHeading label="Business Partners" title="Our Esteemed" accent="Business Partners" sub="Collaborating with industry leaders to build innovative AI solutions." />
           <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               { name: "WiZ-BoX", logo: partnerWizBox },
