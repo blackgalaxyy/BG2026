@@ -275,7 +275,7 @@ function ContactForm() {
   return (
     <div style={{
       position: 'relative',
-      padding: '28px',
+      padding: '32px 28px',
       borderRadius: '16px',
       background: 'rgba(28,28,40,0.85)',
       border: '1px solid rgba(255,90,0,0.2)',
@@ -307,8 +307,8 @@ function ContactForm() {
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
           {([
             { label: 'Full Name', name: 'full_name', type: 'text', placeholder: 'Aarav Sharma' },
-            { label: 'Corporate Email', name: 'email', type: 'email', placeholder: 'aarav@company.com' },
-            { label: 'Company', name: 'company', type: 'text', placeholder: 'Aarav Solutions' },
+            { label: 'Email', name: 'email', type: 'email', placeholder: 'aarav@company.com' },
+            { label: 'University / Company', name: 'company', type: 'text', placeholder: 'Aarav Solutions' },
           ] as const).map(({ label, name, type, placeholder }) => (
             <div key={name} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <label style={{ fontSize: '0.875rem', fontWeight: 500, color: 'rgba(255,255,255,0.7)' }}>{label}</label>
